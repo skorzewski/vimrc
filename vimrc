@@ -17,11 +17,11 @@ Plugin 'scrooloose/syntastic' " syntax checker
 Plugin 'tomtom/tcomment_vim' " easier comments
 Plugin 'terryma/vim-multiple-cursors' " multiple cursors
 Plugin 'FSwitch' " switch between header and .cpp files
-Plugin 'kien/ctrlp.vim' " full path fuzzy finder
 Plugin 'chriskempson/base16-vim' " Base16 color scheme
 Plugin 'nvie/vim-flake8' " PEP8 style & syntax checker
 Plugin 'Chiel92/vim-autoformat' " code autoformatter
 Plugin 'hynek/vim-python-pep8-indent' " PEP8 autoindent
+Plugin 'maxbrunsfeld/vim-yankstack' " history of yanks
 
 filetype plugin indent on
 " To ignore plugin indent changes, instead use:
@@ -47,6 +47,7 @@ syntax on " syntax highlighting
 set hlsearch " highlight searched terms
 set laststatus=2 " always show status line
 set number " show line numbers
+set nomousehide " don't hide mouse cursor
 
 " searching
 set hlsearch " highlight searched terms
