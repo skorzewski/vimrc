@@ -17,11 +17,12 @@ Plugin 'scrooloose/syntastic' " syntax checker
 Plugin 'tomtom/tcomment_vim' " easier comments
 Plugin 'terryma/vim-multiple-cursors' " multiple cursors
 Plugin 'FSwitch' " switch between header and .cpp files
-Plugin 'chriskempson/base16-vim' " Base16 color scheme
 Plugin 'nvie/vim-flake8' " PEP8 style & syntax checker
 Plugin 'Chiel92/vim-autoformat' " code autoformatter
 Plugin 'hynek/vim-python-pep8-indent' " PEP8 autoindent
 Plugin 'maxbrunsfeld/vim-yankstack' " history of yanks
+Plugin 'chriskempson/base16-vim' " Base16 color scheme
+Plugin 'altercation/vim-colors-solarized' " Solarized color scheme
 
 filetype plugin indent on
 " To ignore plugin indent changes, instead use:
@@ -120,7 +121,7 @@ let g:syntastic_python_pylint_args = '-disable=star-args'
 
 " color scheme
 set background=dark
-colorscheme base16-default
+colorscheme solarized
 
 " GUI options
 set guifont=Ubuntu\ Mono\ 12
