@@ -75,7 +75,12 @@ map <F1> :NERDTreeToggle<CR>
 
 " Remove trailing spaces
 function! RemoveTrailingWhitespaces()
-    %s/\s\+$//e
+    if (
+                \ &ft != 'make' &&
+                \ &ft != 'markdown' &&
+                \ &ft != 'text')
+        %s/\s\+$//e
+    endif
 endfunction
 
 " F2 saves file:
@@ -122,6 +127,9 @@ let g:syntastic_python_pylint_args = '-disable=star-args'
 " color scheme
 set background=dark
 colorscheme solarized
+
+" Show trailing spaces
+match ErrorMsg '\s\+$'
 
 " GUI options
 set guifont=Ubuntu\ Mono\ 12
