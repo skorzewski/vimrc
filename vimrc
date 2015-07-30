@@ -10,7 +10,8 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " plugins
-Plugin 'Lokaltog/vim-powerline' " fancy status line
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'powerline/fonts' " fancy status line and its special fonts
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'scrooloose/nerdtree' " file system explorer
 Plugin 'scrooloose/syntastic' " syntax checker
@@ -132,7 +133,7 @@ colorscheme solarized
 match ErrorMsg '\s\+$'
 
 " GUI options
-set guifont=Ubuntu\ Mono\ 12
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 if has('gui_running')
     set guioptions-=T " remove toolbar
     set guioptions-=L " remove left scrollbar
