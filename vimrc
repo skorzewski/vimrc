@@ -13,6 +13,7 @@ Plugin 'gmarik/vundle'
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'powerline/fonts' " fancy status line and its special fonts
 Plugin 'tpope/vim-fugitive' " Git integration
+Plugin 'airblade/vim-gitgutter' " Git gutter
 Plugin 'scrooloose/nerdtree' " file system explorer
 Plugin 'scrooloose/syntastic' " syntax checker
 Plugin 'tomtom/tcomment_vim' " easier comments
