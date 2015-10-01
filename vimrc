@@ -26,6 +26,8 @@ Plugin 'maxbrunsfeld/vim-yankstack' " history of yanks
 Plugin 'chriskempson/base16-vim' " Base16 color scheme
 Plugin 'altercation/vim-colors-solarized' " Solarized color scheme
 
+call vundle#end()
+
 filetype plugin indent on
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
