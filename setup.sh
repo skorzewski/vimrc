@@ -14,7 +14,7 @@ cp ${VIM_PLUGINS_DIR}/fonts/UbuntuMono/*.ttf ~/.fonts/
 fc-cache -vf ~/.fonts/
 
 pip install --user powerline-status
-mkdir ~/.config/powerline
+mkdir -p ~/.config/powerline
 sed 's/"colorscheme": "default"/"colorscheme": "solarized"/g' <${VIM_PLUGINS_DIR}/powerline/powerline/config_files/config.json >~/.config/powerline/config.json
 
 cp solarized.vim ~/.vim/colors/
