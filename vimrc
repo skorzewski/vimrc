@@ -148,5 +148,6 @@ au BufNewFile,BufRead *.grm set filetype=thraxgrm
 au BufNewFile,BufRead *.i set filetype=conf
 au BufNewFile,BufRead *.jsgf set filetype=jsgf
 au BufNewFile,BufRead *.mdown set filetype=markdown
+au BufNewFile,BufRead *.thrift set filetype=thrift
 au BufNewFile,BufRead *.tpl set filetype=cpp
 au BufNewFile,BufRead README set filetype=markdown
