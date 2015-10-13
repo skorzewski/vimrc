@@ -93,14 +93,22 @@ nmap <F2> :call RemoveTrailingWhitespaces()<CR>:w<CR>
 " in insert mode F2 will exit insert and save
 imap <F2> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
 
-" G2P-style code autoformatting
-nmap <F3> :%!astyle --indent=tab --style=stroustrup --break-closing-brackets --add-brackets<CR>
-imap <F3> <ESC>:%!astyle --indent=tab --style=stroustrup --break-closing-brackets --add-brackets<CR>
+" Adtech style code autoformatting
+nmap <F3> :%!astyle --indent=spaces=4 --style=google --add-brackets<CR>
+imap <F3> <ESC>:%!astyle --indent=spaces=4 --style=google --add-brackets<CR>
+
+noremap <F3> :Autoformat<CR><CR>
+let g:formatprg_cpp = "astyle"
+let g:formatprg_args_cpp = system('cat ~/.astylerc | grep -v "^#.*" | grep -z')
+
+" G2P style code autoformatting
+" nmap <F3> :%!astyle --indent=tab --style=stroustrup --break-closing-brackets --add-brackets<CR>
+" imap <F3> <ESC>:%!astyle --indent=tab --style=stroustrup --break-closing-brackets --add-brackets<CR>
 
 " Stroustrup-K&R style for C code in G2P
-let g:formatprg_args_c = "--indent=tab --style=stroustrup --break-closing-brackets --add-brackets"
+" let g:formatprg_args_c = "--indent=tab --style=stroustrup --break-closing-brackets --add-brackets"
 " Code autoformatting
-noremap <F3> :Autoformat<CR><CR>
+" noremap <F3> :Autoformat<CR><CR>
 
 " Geany-style toggling comments
 nmap <C-e> gcc
@@ -144,6 +152,7 @@ if has('gui_running')
 endif
 
 " file types
+au BufNewFile,BufRead *.conf set filetype=cfg
 au BufNewFile,BufRead *.grm set filetype=thraxgrm
 au BufNewFile,BufRead *.i set filetype=conf
 au BufNewFile,BufRead *.jsgf set filetype=jsgf
