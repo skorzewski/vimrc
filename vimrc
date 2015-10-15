@@ -49,11 +49,11 @@ set termencoding=utf-8
 
 " basic options
 syntax on " syntax highlighting
-set hlsearch " highlight searched terms
 set laststatus=2 " always show status line
 set number " show line numbers
 set nomousehide " don't hide mouse cursor
 set winaltkeys=no " don't map Alt+_ to menu bar
+set scrolloff=10 " autoscroll near the edge
 
 " searching
 set hlsearch " highlight searched terms
@@ -138,7 +138,7 @@ let g:syntastic_python_pylint_args = '-disable=star-args'
 
 " color scheme
 set background=dark
-colorscheme solarized
+colorscheme default
 
 " Show trailing spaces
 match ErrorMsg '\s\+$'
@@ -146,6 +146,8 @@ match ErrorMsg '\s\+$'
 " GUI options
 set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 if has('gui_running')
+    set background=dark
+    colorscheme solarized
     set guioptions-=T " remove toolbar
     set guioptions-=L " remove left scrollbar
     set guioptions-=r " remove right scrollbar
