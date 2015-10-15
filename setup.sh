@@ -6,6 +6,8 @@ VIM_PLUGINS_DIR=~/.vim/bundle
 rm ~/.vimrc
 ln -s ${PWD}/vimrc ~/.vimrc
 
+git clone https://github.com/VundleVim/Vundle.vim.git ${VIM_PLUGINS_DIR}/Vundle.vim
+
 sudo apt-get install astyle cppcheck pep8 pyflakes pylint
 
 vim +PluginInstall +qall
