@@ -1,3 +1,5 @@
+" author: Paweł Skórzewski
+
 " vi compatibility
 set nocompatible " vim instead of vi
 filetype off " for plugins
@@ -53,7 +55,6 @@ set laststatus=2 " always show status line
 set number " show line numbers
 set nomousehide " don't hide mouse cursor
 set winaltkeys=no " don't map Alt+_ to menu bar
-set scrolloff=10 " autoscroll near the edge
 
 " searching
 set hlsearch " highlight searched terms
