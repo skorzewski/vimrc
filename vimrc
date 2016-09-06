@@ -156,6 +156,7 @@ endif
 
 " file types
 au BufNewFile,BufRead *.conf set filetype=cfg
+au BufNewFile,BufRead *.gra set filetype=cfg
 au BufNewFile,BufRead *.grm set filetype=thraxgrm
 au BufNewFile,BufRead *.i set filetype=conf
 au BufNewFile,BufRead *.jsgf set filetype=jsgf
