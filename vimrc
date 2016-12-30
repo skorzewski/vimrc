@@ -111,9 +111,6 @@ let g:formatprg_args_cpp = system('cat ~/.astylerc | grep -v "^#.*" | grep -z')
 " Code autoformatting
 " noremap <F3> :Autoformat<CR><CR>
 
-" Geany-style toggling comments
-nmap <C-e> gcc
-
 " Ctrl+arrows scroll
 nnoremap <C-Down> <C-e>
 nnoremap <C-Up> <C-y>
@@ -131,6 +128,10 @@ nnoremap gH :FSRight<cr>
 " diff shortcuts
 nnoremap gv :diffoff!<CR>
 nnoremap gV :diffthis<CR><C-w><C-w>:diffthis<CR>:diffupdate<CR><C-w><C-w>
+
+" font adjustment
+nnoremap g- :set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 9<CR>
+nnoremap g= :set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12<CR>
 
 " Syntastic settings
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
