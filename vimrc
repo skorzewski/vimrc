@@ -163,6 +163,7 @@ au BufNewFile,BufRead *.i set filetype=conf
 au BufNewFile,BufRead *.jenkinsfile set filetype=groovy
 au BufNewFile,BufRead *.Jenkinsfile set filetype=groovy
 au BufNewFile,BufRead *.jsgf set filetype=jsgf
+au BufNewFile,BufRead *.md set filetype=markdown
 au BufNewFile,BufRead *.mdown set filetype=markdown
 au BufNewFile,BufRead *.thrift set filetype=thrift
 au BufNewFile,BufRead *.tpg set filetype=tokenpattern
