@@ -157,6 +157,11 @@ if has('gui_running')
     set guioptions-=T " remove toolbar
     set guioptions-=L " remove left scrollbar
     set guioptions-=r " remove right scrollbar
+else
+    " Airline color scheme
+    set t_Co=256
+    let g:airline_theme="solarized"
+    let g:airline_solarized_bg='dark'
 endif
 
 " file types
