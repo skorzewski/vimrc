@@ -12,7 +12,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " plugins
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline' " powerline
+Plugin 'vim-airline/vim-airline-themes' " powerline themes
 Plugin 'powerline/fonts' " fancy status line and its special fonts
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'airblade/vim-gitgutter' " Git gutter
@@ -46,7 +47,7 @@ filetype plugin indent on
 
 " UTF-8 encoding
 set enc=utf-8
-set fenc=utf-8
+" set fenc=utf-8
 set termencoding=utf-8
 
 " basic options
@@ -136,7 +137,7 @@ nnoremap g= :set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12<CR>
 " Syntastic settings
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 let g:syntastic_cpp_compiler_options = ' -std=c++0x'
-let g:syntastic_python_checkers = ['python3', 'pep8', 'pyflakes', 'pylint']
+let g:syntastic_python_checkers = ['python3', 'pep8', 'pylint3']
 let g:syntastic_python_pylint_args = '-disable=star-args'
 
 " color scheme
@@ -147,7 +148,9 @@ colorscheme default
 match ErrorMsg '\s\+$'
 
 " GUI options
-set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+let g:airline_powerline_fonts = 0
+" set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+set guifont=Ubuntu\ Mono\ 12
 if has('gui_running')
     set background=dark
     colorscheme solarized
