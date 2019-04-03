@@ -137,7 +137,7 @@ nnoremap g= :set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12<CR>
 
 " Syntastic settings
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
-let g:syntastic_cpp_compiler_options = ' -std=c++0x'
+let g:syntastic_cpp_compiler_options = ' -std=c++14'
 let g:syntastic_python_checkers = ['python3', 'pep8', 'pylint3']
 let g:syntastic_python_pylint_args = '-disable=star-args'
 
