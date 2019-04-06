@@ -18,3 +18,5 @@ fc-cache -vf ~/.fonts/
 
 mkdir -p ~/.vim/colors
 cp solarized.vim ~/.vim/colors/
+
+cat gtk.css >>.config/gtk-3.0/gtk.css
