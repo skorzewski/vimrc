@@ -79,6 +79,8 @@ set tabstop=4 " tab is 4 spaces long
 
 " F1 toggles file system tree
 map <F1> :NERDTreeToggle<CR>
+" Ctrl+B toggles file system tree
+map <C-b> :NERDTreeToggle<CR>
 
 " Remove trailing spaces
 function! RemoveTrailingWhitespaces()
@@ -93,8 +95,14 @@ endfunction
 " F2 saves file:
 " in normal mode F2 will save the file
 nmap <F2> :call RemoveTrailingWhitespaces()<CR>:w<CR>
-" in insert mode F2 will exit insert and save
+" in insert mode F2 will switch to normal mode and save
 imap <F2> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
+
+" Ctrl+S saves file:
+" in normal mode Ctrl+S will save the file
+nmap <C-s> :call RemoveTrailingWhitespaces()<CR>:w<CR>
+" in insert mode Ctrl+S will switch to normal mode and save
+imap <C-s> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
 
 " Adtech style code autoformatting
 nmap <F3> :%!astyle --indent=spaces=4 --style=google --add-brackets<CR>
