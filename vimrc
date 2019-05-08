@@ -140,8 +140,8 @@ nnoremap gv :diffoff!<CR>
 nnoremap gV :diffthis<CR><C-w><C-w>:diffthis<CR>:diffupdate<CR><C-w><C-w>
 
 " font adjustment
-nnoremap g- :set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 9<CR>
-nnoremap g= :set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12<CR>
+nnoremap g- :set guifont=Ubuntu\ Mono\ 9<CR>
+nnoremap g= :set guifont=Ubuntu\ Mono\ 12<CR>
 
 " Syntastic settings
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
@@ -171,9 +171,9 @@ if has('gui_running')
     set guioptions-=r " remove right scrollbar
 else
     " Airline color scheme
-    set t_Co=256
-    let g:airline_theme="solarized"
-    let g:airline_solarized_bg='dark'
+    set t_Co=16
+    colorscheme default
+    let g:airline_theme="term"
 endif
 
 " file types
