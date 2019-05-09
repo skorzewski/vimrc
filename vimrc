@@ -25,6 +25,7 @@ Plugin 'nvie/vim-flake8' " PEP8 style & syntax checker
 Plugin 'Chiel92/vim-autoformat' " code autoformatter
 Plugin 'hynek/vim-python-pep8-indent' " PEP8 autoindent
 Plugin 'maxbrunsfeld/vim-yankstack' " history of yanks
+Plugin 'romainl/vim-cool' " smart search highlighting
 Plugin 'chriskempson/base16-vim' " Base16 color scheme
 Plugin 'altercation/vim-colors-solarized' " Solarized color scheme
 
@@ -55,12 +56,6 @@ set laststatus=2 " always show status line
 set number " show line numbers
 set nomousehide " don't hide mouse cursor
 set winaltkeys=no " don't map Alt+_ to menu bar
-
-" searching
-set hlsearch " highlight searched terms
-set incsearch " go to searched term
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " ignorecase if lowercase
 set ignorecase
@@ -104,11 +99,11 @@ nmap <C-s> :call RemoveTrailingWhitespaces()<CR>:w<CR>
 " in insert mode Ctrl+S will switch to normal mode and save
 imap <C-s> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
 
-" Ctrl+W saves file:
+" Ctrl+O saves file:
 " in normal mode Ctrl+W will save the file
-nmap <C-w> :call RemoveTrailingWhitespaces()<CR>:w<CR>
+nmap <C-o> :call RemoveTrailingWhitespaces()<CR>:w<CR>
 " in insert mode Ctrl+S will switch to normal mode and save
-imap <C-w> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
+imap <C-o> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
 
 " Adtech style code autoformatting
 nmap <F3> :%!astyle --indent=spaces=4 --style=google --add-brackets<CR>
