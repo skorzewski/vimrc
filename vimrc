@@ -14,7 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 " plugins
 Plugin 'vim-airline/vim-airline' " powerline
 Plugin 'vim-airline/vim-airline-themes' " powerline themes
-Plugin 'powerline/fonts' " fancy status line and its special fonts
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'airblade/vim-gitgutter' " Git gutter
 Plugin 'scrooloose/nerdtree' " file system explorer
@@ -28,7 +27,6 @@ Plugin 'hynek/vim-python-pep8-indent' " PEP8 autoindent
 Plugin 'maxbrunsfeld/vim-yankstack' " history of yanks
 Plugin 'chriskempson/base16-vim' " Base16 color scheme
 Plugin 'altercation/vim-colors-solarized' " Solarized color scheme
-" Plugin 'jacoborus/tender.vim' " Tender color scheme
 
 call vundle#end()
 
@@ -81,6 +79,8 @@ set tabstop=4 " tab is 4 spaces long
 map <F1> :NERDTreeToggle<CR>
 " Ctrl+B toggles file system tree
 map <C-b> :NERDTreeToggle<CR>
+" Ctrl+E toggles file system tree
+map <C-e> :NERDTreeToggle<CR>
 
 " Remove trailing spaces
 function! RemoveTrailingWhitespaces()
@@ -103,6 +103,12 @@ imap <F2> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
 nmap <C-s> :call RemoveTrailingWhitespaces()<CR>:w<CR>
 " in insert mode Ctrl+S will switch to normal mode and save
 imap <C-s> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
+
+" Ctrl+W saves file:
+" in normal mode Ctrl+W will save the file
+nmap <C-w> :call RemoveTrailingWhitespaces()<CR>:w<CR>
+" in insert mode Ctrl+S will switch to normal mode and save
+imap <C-w> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
 
 " Adtech style code autoformatting
 nmap <F3> :%!astyle --indent=spaces=4 --style=google --add-brackets<CR>
