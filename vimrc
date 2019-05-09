@@ -57,6 +57,10 @@ set number " show line numbers
 set nomousehide " don't hide mouse cursor
 set winaltkeys=no " don't map Alt+_ to menu bar
 
+" searching
+set hlsearch " highlight searched terms
+set incsearch " go to searched term
+
 " ignorecase if lowercase
 set ignorecase
 set smartcase
