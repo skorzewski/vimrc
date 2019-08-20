@@ -28,7 +28,7 @@ Plugin 'hynek/vim-python-pep8-indent' " PEP8 autoindent
 Plugin 'maxbrunsfeld/vim-yankstack' " history of yanks
 Plugin 'chriskempson/base16-vim' " Base16 color scheme
 Plugin 'altercation/vim-colors-solarized' " Solarized color scheme
-" Plugin 'jacoborus/tender.vim' " Tender color scheme
+Plugin 'tomasiser/vim-code-dark' " VSCode's Dark+ color scheme
 
 call vundle#end()
 
@@ -161,20 +161,15 @@ let g:airline_powerline_fonts = 0
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 set guifont=Ubuntu\ Mono\ 12
 if has('gui_running')
-    set background=dark
-    colorscheme base16-material-darker
-    let g:airline_theme="powerlineish"
-    " colorscheme tender
-    " let g:airline_theme="tender"
+    colorscheme codedark
     set guioptions-=T " remove toolbar
     set guioptions-=L " remove left scrollbar
     set guioptions-=r " remove right scrollbar
 else
     " Airline color scheme
     set t_Co=256
-    let g:airline_theme="solarized"
-    let g:airline_solarized_bg='dark'
 endif
+let g:airline_theme = 'codedark'
 
 " file types
 au BufNewFile,BufRead *.conf set filetype=cfg
