@@ -14,7 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 " plugins
 Plugin 'vim-airline/vim-airline' " powerline
 Plugin 'vim-airline/vim-airline-themes' " powerline themes
-Plugin 'powerline/fonts' " fancy status line and its special fonts
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'airblade/vim-gitgutter' " Git gutter
 Plugin 'scrooloose/nerdtree' " file system explorer
@@ -26,6 +25,7 @@ Plugin 'nvie/vim-flake8' " PEP8 style & syntax checker
 Plugin 'Chiel92/vim-autoformat' " code autoformatter
 Plugin 'hynek/vim-python-pep8-indent' " PEP8 autoindent
 Plugin 'maxbrunsfeld/vim-yankstack' " history of yanks
+Plugin 'romainl/vim-cool' " smart search highlighting
 Plugin 'chriskempson/base16-vim' " Base16 color scheme
 Plugin 'altercation/vim-colors-solarized' " Solarized color scheme
 Plugin 'tomasiser/vim-code-dark' " VSCode's Dark+ color scheme
@@ -61,8 +61,6 @@ set winaltkeys=no " don't map Alt+_ to menu bar
 " searching
 set hlsearch " highlight searched terms
 set incsearch " go to searched term
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " ignorecase if lowercase
 set ignorecase
@@ -81,6 +79,8 @@ set tabstop=4 " tab is 4 spaces long
 map <F1> :NERDTreeToggle<CR>
 " Ctrl+B toggles file system tree
 map <C-b> :NERDTreeToggle<CR>
+" Ctrl+E toggles file system tree
+map <C-e> :NERDTreeToggle<CR>
 
 " Remove trailing spaces
 function! RemoveTrailingWhitespaces()
@@ -103,6 +103,12 @@ imap <F2> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
 nmap <C-s> :call RemoveTrailingWhitespaces()<CR>:w<CR>
 " in insert mode Ctrl+S will switch to normal mode and save
 imap <C-s> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
+
+" Ctrl+O saves file:
+" in normal mode Ctrl+W will save the file
+nmap <C-o> :call RemoveTrailingWhitespaces()<CR>:w<CR>
+" in insert mode Ctrl+S will switch to normal mode and save
+imap <C-o> <ESC>:call RemoveTrailingWhitespaces()<CR>:w<CR>
 
 " Adtech style code autoformatting
 nmap <F3> :%!astyle --indent=spaces=4 --style=google --add-brackets<CR>
@@ -140,8 +146,8 @@ nnoremap gv :diffoff!<CR>
 nnoremap gV :diffthis<CR><C-w><C-w>:diffthis<CR>:diffupdate<CR><C-w><C-w>
 
 " font adjustment
-nnoremap g- :set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 9<CR>
-nnoremap g= :set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12<CR>
+nnoremap g- :set guifont=Ubuntu\ Mono\ 9<CR>
+nnoremap g= :set guifont=Ubuntu\ Mono\ 12<CR>
 
 " Syntastic settings
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
@@ -167,7 +173,8 @@ if has('gui_running')
     set guioptions-=r " remove right scrollbar
 else
     " Airline color scheme
-    set t_Co=256
+    set t_Co=16
+    colorscheme default
 endif
 let g:airline_theme = 'codedark'
 
