@@ -26,7 +26,7 @@ cat gtk.css >>.config/gtk-3.0/gtk.css
 
 sudo apt install tmux
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || echo "Tmux plugin manager already installed"
 
 [ -f ~/.tmux.conf ] && rm ~/.tmux.conf
 ln -s ${CURRENT_DIR}/tmux.conf ~/.tmux.conf
