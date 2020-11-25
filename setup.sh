@@ -32,3 +32,5 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || echo "Tmux 
 ln -s ${CURRENT_DIR}/tmux.conf ~/.tmux.conf
 
 tmux source-file ~/.tmux.conf
+
+echo "Aby pobrać i uruchmić wtyczki do Tmux-a, naciśnij Ctrl-D + I w sesji Tmux-a".
